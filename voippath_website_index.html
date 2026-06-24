@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoipPath — SAP B1 Automation for Saudi Businesses</title>
+    <meta name="description" content="We automate SAP B1 for Saudi businesses. ZATCA compliance, bank reconciliation, inventory alerts. Setup in days, not months.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0F172A; color: white; }
+        .gradient-text { background: linear-gradient(135deg, #00D4AA, #635BFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { box-shadow: 0 0 40px rgba(0, 212, 170, 0.3); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .nav-blur { backdrop-filter: blur(20px); background: rgba(15, 23, 42, 0.95); }
+        .hero-bg { background: radial-gradient(ellipse at 80% 20%, rgba(0,212,170,0.15) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(99,91,255,0.1) 0%, transparent 50%), #0F172A; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; z-index: 100; }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .pricing-popular { border: 1px solid rgba(0, 212, 170, 0.4); position: relative; }
+        .check-green { color: #00D4AA; }
+        .x-red { color: #EF4444; }
+        html { scroll-behavior: smooth; }
+        .mobile-menu { display: none; }
+        .mobile-menu.active { display: block; }
+        @media (max-width: 768px) {
+            .desktop-nav { display: none !important; }
+        }
+        @media (min-width: 769px) {
+            .mobile-toggle { display: none !important; }
+            .mobile-menu { display: none !important; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav-blur fixed w-full z-50 border-b border-gray-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#00D4AA] to-[#635BFF] rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">V</span>
+                </div>
+                <div>
+                    <span class="text-xl font-bold text-white">VoipPath</span>
+                    <span class="block text-xs text-gray-400">SAP B1 Automation</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 desktop-nav">
+                <a href="#services" class="text-gray-300 hover:text-[#00D4AA] transition font-medium">Services</a>
+                <a href="#pricing" class="text-gray-300 hover:text-[#00D4AA] transition font-medium">Pricing</a>
+                <a href="#about" class="text-gray-300 hover:text-[#00D4AA] transition font-medium">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-[#00D4AA] transition font-medium">Contact</a>
+            </div>
+            <a href="https://wa.me/966500150658" target="_blank" class="hidden md:inline-flex bg-[#00D4AA] hover:bg-[#00D4AA]/80 text-[#0A2540] font-semibold px-6 py-2.5 rounded-full transition items-center space-x-2">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp Us</span>
+            </a>
+            <button class="mobile-toggle md:hidden text-white text-2xl" onclick="document.getElementById('mobileMenu').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-[#0F172A]/98 border-b border-gray-800 px-4 pb-4">
+        <a href="#services" class="block text-gray-300 py-3 border-b border-gray-800" onclick="document.getElementById('mobileMenu').classList.remove('active')">Services</a>
+        <a href="#pricing" class="block text-gray-300 py-3 border-b border-gray-800" onclick="document.getElementById('mobileMenu').classList.remove('active')">Pricing</a>
+        <a href="#about" class="block text-gray-300 py-3 border-b border-gray-800" onclick="document.getElementById('mobileMenu').classList.remove('active')">About</a>
+        <a href="#contact" class="block text-gray-300 py-3" onclick="document.getElementById('mobileMenu').classList.remove('active')">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center space-x-2 bg-[#00D4AA]/10 border border-[#00D4AA]/30 rounded-full px-4 py-2 mb-8">
+                <span class="text-[#00D4AA] text-sm font-medium">🇸🇦 Based in Riyadh</span>
+                <span class="text-gray-500">•</span>
+                <span class="text-gray-400 text-sm">Serving Saudi Arabia</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                Automate Your<br>
+                <span class="gradient-text">SAP B1</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-400 mb-4">
+                Save <span class="text-[#00D4AA] font-bold">20 Hours Per Week</span>
+            </p>
+
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl leading-relaxed">
+                We build n8n workflows that connect SAP B1 to ZATCA, banks, and your team — automatically. 
+                No expensive software licenses. No 6-month projects. Results in days.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-16">
+                <a href="https://wa.me/966500150658" target="_blank" class="bg-[#00D4AA] hover:bg-[#00D4AA]/80 text-[#0A2540] font-bold px-8 py-4 rounded-full text-center transition flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Get Free Consultation</span>
+                </a>
+                <a href="#services" class="border border-gray-600 hover:border-[#00D4AA] text-white px-8 py-4 rounded-full text-center transition flex items-center justify-center space-x-2">
+                    <i class="fas fa-play"></i>
+                    <span>Explore Services</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 sm:gap-6 max-w-lg">
+                <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-4 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-[#00D4AA]">10+</div>
+                    <div class="text-gray-400 text-xs sm:text-sm mt-1">SAP B1 Workflows</div>
+                </div>
+                <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-4 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-[#00D4AA]">SAR 3K+</div>
+                    <div class="text-gray-400 text-xs sm:text-sm mt-1">Starting Price</div>
+                </div>
+                <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-4 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-[#00D4AA]">10 Days</div>
+                    <div class="text-gray-400 text-xs sm:text-sm mt-1">Average Setup</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="py-8 border-t border-b border-gray-800/50 bg-[#1E293B]/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs text-gray-500 uppercase tracking-widest mb-4">Trusted by Saudi Businesses</p>
+        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            <span class="text-gray-500 font-semibold text-sm">SAP B1 Partners</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-500 font-semibold text-sm">ZATCA Compliant</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-500 font-semibold text-sm">n8n Certified</span>
+            <span class="text-gray-600">•</span>
+            <span class="text-gray-500 font-semibold text-sm">Riyadh Based</span>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">What We <span class="gradient-text">Automate</span></h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ready-to-deploy workflows for Saudi businesses using SAP B1</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-8 card-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-14 h-14 bg-[#00D4AA]/10 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-file-invoice text-[#00D4AA] text-2xl"></i>
+                    </div>
+                    <span class="bg-[#00D4AA]/10 text-[#00D4AA] text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">ZATCA E-Invoicing</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">Auto-generate UBL XML, submit to Fatoora, get QR code. ZATCA Phase 2 compliant.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-[#00D4AA] font-bold text-lg">From SAR 5,000</span>
+                    <a href="#pricing" class="text-gray-400 hover:text-[#00D4AA] transition text-sm font-medium">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-8 card-hover">
+                <div class="w-14 h-14 bg-[#635BFF]/10 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-university text-[#635BFF] text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Bank Reconciliation</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">Match SNB, Al Rajhi, Riyad Bank transactions to SAP B1 automatically.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-[#00D4AA] font-bold text-lg">From SAR 12,000</span>
+                    <a href="#pricing" class="text-gray-400 hover:text-[#00D4AA] transition text-sm font-medium">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-8 card-hover">
+                <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-boxes text-orange-500 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Inventory & Auto-PO</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">Monitor stock, auto-create purchase orders, WhatsApp approval.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-[#00D4AA] font-bold text-lg">From SAR 8,000</span>
+                    <a href="#pricing" class="text-gray-400 hover:text-[#00D4AA] transition text-sm font-medium">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-8 card-hover">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-robot text-purple-500 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">SAP B1 AI Suite</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">Commissions, credit limits, reporting, VAT returns, supplier payments.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-[#00D4AA] font-bold text-lg">From SAR 5,000</span>
+                    <a href="#pricing" class="text-gray-400 hover:text-[#00D4AA] transition text-sm font-medium">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY VOIPPATH -->
+<section id="about" class="py-24 bg-[#1E293B]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Why <span class="gradient-text">VoipPath?</span></h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div class="bg-[#0F172A] border border-gray-800/50 rounded-2xl p-8">
+                <h3 class="text-lg font-bold text-gray-400 mb-6 uppercase tracking-wide">Enterprise Consultants</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-gray-500">
+                        <span class="x-red font-bold text-lg">✕</span>
+                        <span>SAR 50,000+ setup</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-500">
+                        <span class="x-red font-bold text-lg">✕</span>
+                        <span>3-6 month timeline</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-500">
+                        <span class="x-red font-bold text-lg">✕</span>
+                        <span>Expensive licenses</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-500">
+                        <span class="x-red font-bold text-lg">✕</span>
+                        <span>Junior consultants</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-500">
+                        <span class="x-red font-bold text-lg">✕</span>
+                        <span>Limited Arabic support</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gradient-to-br from-[#00D4AA]/10 to-[#635BFF]/10 border border-[#00D4AA]/30 rounded-2xl p-8 glow">
+                <h3 class="text-lg font-bold text-[#00D4AA] mb-6 uppercase tracking-wide">VoipPath</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-white">
+                        <span class="check-green font-bold text-lg">✓</span>
+                        <span>SAR 5,000-20,000 setup</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-white">
+                        <span class="check-green font-bold text-lg">✓</span>
+                        <span>1-2 week delivery</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-white">
+                        <span class="check-green font-bold text-lg">✓</span>
+                        <span>No license fees (n8n is free)</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-white">
+                        <span class="check-green font-bold text-lg">✓</span>
+                        <span>Expert-level SAP B1</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-white">
+                        <span class="check-green font-bold text-lg">✓</span>
+                        <span>Native Arabic support</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <p class="text-gray-400 text-lg">Same quality, <span class="text-[#00D4AA] font-bold">50% less cost</span>, <span class="text-[#00D4AA] font-bold">10x faster</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Transparent <span class="gradient-text">Pricing</span></h2>
+            <p class="text-gray-400 text-lg">No hidden fees. Setup in 1-2 weeks.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- ZATCA -->
+            <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-8 card-hover">
+                <div class="text-[#00D4AA] text-sm font-bold uppercase tracking-wider mb-2">ZATCA E-Invoicing</div>
+                <div class="text-4xl font-bold mb-1">SAR 5,000</div>
+                <div class="text-gray-400 text-sm mb-6">Setup + SAR 1,000/month</div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> UBL 2.1 XML generation
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Fatoora API integration
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> QR code extraction
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Error handling
+                    </li>
+                </ul>
+                <a href="https://wa.me/966500150658?text=I%20want%20ZATCA%20automation" target="_blank" class="block w-full text-center py-3 rounded-full font-bold text-sm transition bg-[#00D4AA]/10 text-[#00D4AA] border border-[#00D4AA]/20 hover:bg-[#00D4AA]/20">Get Quote</a>
+            </div>
+
+            <!-- Bank Reconciliation - Popular -->
+            <div class="bg-[#1E293B]/60 border border-[#00D4AA]/30 rounded-2xl p-8 card-hover pricing-popular">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00D4AA] text-[#0A2540] text-xs font-bold px-4 py-1 rounded-full">POPULAR</span>
+                <div class="text-[#00D4AA] text-sm font-bold uppercase tracking-wider mb-2">Bank Reconciliation</div>
+                <div class="text-4xl font-bold mb-1">SAR 12,000</div>
+                <div class="text-gray-400 text-sm mb-6">Setup + SAR 2,000/month</div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> SNB, Al Rajhi, Riyad Bank
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> 90% auto-match rate
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Exception alerts
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Daily summary report
+                    </li>
+                </ul>
+                <a href="https://wa.me/966500150658?text=I%20want%20bank%20reconciliation" target="_blank" class="block w-full text-center py-3 rounded-full font-bold text-sm transition bg-[#00D4AA] text-[#0A2540] hover:bg-[#00D4AA]/80">Get Quote</a>
+            </div>
+
+            <!-- Inventory -->
+            <div class="bg-[#1E293B]/60 border border-gray-800/50 rounded-2xl p-8 card-hover">
+                <div class="text-[#00D4AA] text-sm font-bold uppercase tracking-wider mb-2">Inventory & Auto-PO</div>
+                <div class="text-4xl font-bold mb-1">SAR 8,000</div>
+                <div class="text-gray-400 text-sm mb-6">Setup + SAR 1,200/month</div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Stock level monitoring
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Auto-PO creation
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> WhatsApp approval
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300 text-sm">
+                        <span class="check-green font-bold">✓</span> Supplier notification
+                    </li>
+                </ul>
+                <a href="https://wa.me/966500150658?text=I%20want%20inventory%20automation" target="_blank" class="block w-full text-center py-3 rounded-full font-bold text-sm transition bg-[#00D4AA]/10 text-[#00D4AA] border border-[#00D4AA]/20 hover:bg-[#00D4AA]/20">Get Quote</a>
+            </div>
+        </div>
+
+        <!-- Bundle -->
+        <div class="mt-12 bg-gradient-to-r from-[#00D4AA]/10 to-[#635BFF]/10 border border-[#00D4AA]/20 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">💡 Bundle & Save</h3>
+            <p class="text-gray-400 mb-6">Combine multiple services for bigger discounts</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-[#0F172A]/50 rounded-xl px-6 py-3">
+                    <span class="text-[#00D4AA] font-bold">Any 3 workflows</span>
+                    <span class="text-white ml-2">20% off</span>
+                </div>
+                <div class="bg-[#0F172A]/50 rounded-xl px-6 py-3">
+                    <span class="text-[#00D4AA] font-bold">Any 5 workflows</span>
+                    <span class="text-white ml-2">30% off</span>
+                </div>
+                <div class="bg-[#0F172A]/50 rounded-xl px-6 py-3">
+                    <span class="text-[#00D4AA] font-bold">Full Suite (12)</span>
+                    <span class="text-white ml-2">SAR 50,000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to <span class="gradient-text">Automate?</span></h2>
+        <p class="text-gray-400 text-lg mb-8">Free 30-minute discovery call. No commitment.</p>
+        <a href="https://wa.me/966500150658" target="_blank" class="inline-flex items-center space-x-3 bg-[#25D366] hover:bg-[#25D366]/80 text-white font-bold px-10 py-5 rounded-full text-lg transition pulse">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.125.298-.323.447-.484.149-.16.198-.273.298-.448.099-.174.05-.324-.025-.449-.075-.124-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.585 5.955L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Chat on WhatsApp</span>
+        </a>
+        <p class="text-gray-500 mt-6">Or email: <a href="mailto:Ai@mdco2030.onMicrosoft.com" class="text-[#00D4AA] hover:underline">Ai@mdco2030.onMicrosoft.com</a></p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-800/50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-8 h-8 bg-gradient-to-br from-[#00D4AA] to-[#635BFF] rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">V</span>
+                    </div>
+                    <span class="font-bold text-lg">VoipPath</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">SAP B1 Automation Specialists<br>Riyadh, Saudi Arabia</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-white">Services</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#services" class="hover:text-[#00D4AA] transition">ZATCA E-Invoicing</a></li>
+                    <li><a href="#services" class="hover:text-[#00D4AA] transition">Bank Reconciliation</a></li>
+                    <li><a href="#services" class="hover:text-[#00D4AA] transition">Inventory Automation</a></li>
+                    <li><a href="#services" class="hover:text-[#00D4AA] transition">SAP B1 AI Suite</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-white">Company</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#about" class="hover:text-[#00D4AA] transition">About Us</a></li>
+                    <li><a href="#pricing" class="hover:text-[#00D4AA] transition">Pricing</a></li>
+                    <li><a href="#contact" class="hover:text-[#00D4AA] transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="https://wa.me/966500150658" target="_blank" class="hover:text-[#00D4AA] transition">WhatsApp</a></li>
+                    <li><a href="mailto:Ai@mdco2030.onMicrosoft.com" class="hover:text-[#00D4AA] transition">Ai@mdco2030.onMicrosoft.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800/50 pt-8 text-center text-gray-500 text-sm">
+            <p>© 2026 VoipPath. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/966500150658" target="_blank" class="whatsapp-float bg-[#25D366] hover:bg-[#25D366]/80 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition pulse">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.125.298-.323.447-.484.149-.16.198-.273.298-.448.099-.174.05-.324-.025-.449-.075-.124-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.585 5.955L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
